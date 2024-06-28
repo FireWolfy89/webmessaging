@@ -25,7 +25,45 @@
         deploymentId: 'ae4a79ec-442a-48c7-8059-256ca9276187'
       });
     </script>
-   
+
+    <script type="text/javascript">
+      window._genesys = {
+        widgets: {
+          main: {
+            debug: true,
+            themes: {
+              primary: '#0000FF'
+            }
+          },
+          webchat: {
+            transport: {
+              type: 'purecloud-v2-sockets',
+              dataURL: 'https://apps.mypurecloud.de',
+              deploymentKey: 'a8b58fb4-bac4-46f1-999f-16f48982ac94',
+              orgGuid: '4dac4580-ab8e-450e-be88-7e0bf4427b5b',
+              interactionData: {
+                routing: {
+                  targetType: 'QUEUE',
+                  targetAddress: 'Technical Support',
+                  priority: 2
+                }
+              }
+            }
+          },
+          auth: {
+            enabled: true,
+            providers: {
+              okta: {
+                clientId: '0oai0tz187NtMoNnr5d7',
+                issuer: 'https://dev-64967203.okta.com/oauth2/default',
+                redirectUri: 'https://firewolfy89.github.io/webmessaging/',
+                scopes: ['openid', 'profile', 'email']
+              }
+            }
+          }
+        }
+      };
+    </script>
 
     <script>
       (function(a,t,c,l,o,u,d){a['_genesysJourneySdk']=o;a[o]=a[o]||function(){
